@@ -115,7 +115,32 @@ String 3:Java String Array To String Example
 
 
 
+jQuery.ajax({
+    type: "GET|POST|DELETE|PUT",
+    url: url,
+    data: data,
+    dataType:"text|html|json|jsonp|script|xml"
+    success: success_callback,
+    error: error_callback
+});
+Common Options
 
+The most commonly used jQuery.ajax() options are the following, for a complete list see the jQuery API reference:
+
+type
+Specify the request method. It can be one of the "GET", "POST", "DELETE", "PUT" values.
+
+url
+Url of the resource on the web.
+
+data
+Data to be sent in the body of the request.
+
+dataType
+Specifies the type of data expected in the response and how that data should be processed by jQuery. Legal values are "text", "html", "script", "json", "jsonp", and "xml".
+
+success
+Callback function to be invoked when the request is completed. 
 
 
 
