@@ -1,3 +1,26 @@
+public class ObjectUtils {
+
+    public static boolean isEmpty(Object s) {
+        if (s == null) {
+            return true;
+        }
+        if ((s instanceof String) && (((String)s).trim().length() == 0)) {
+            return true;
+        }
+        if (s instanceof Map) {
+            return ((Map<?, ?>)s).isEmpty();
+        }
+        if (s instanceof List) {
+            return ((List<?>)s).isEmpty();
+        }
+        if (s instanceof Object[]) {
+            return (((Object[])s).length == 0);
+        }
+        return false;
+    }
+}
+
+
 --배열을 문자열 또는 리스트로 변환
 
 배열을 문자열로 변환: java.util.Arrays 클래스의 toString() 함수를 이용
